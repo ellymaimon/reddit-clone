@@ -3,6 +3,7 @@ export class Article {
     public upvotes: number = 0;
 
     constructor( 
+        public id: number,
         public title: string,
         public category: string,
         public subreddit: string,
