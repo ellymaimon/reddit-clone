@@ -1,0 +1,42 @@
+.article-box {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-gap: 15px;
+}
+
+.article {
+    display: grid;
+    grid-template-columns: 5% 95%;
+    border: 1px solid rgb(173, 172, 172);
+}
+
+.article-body {
+    padding: 10px;
+    background-color: white;
+}
+
+.upvotes {
+    background-color:rgba(255, 255, 255, 0.8);
+    text-align: center;
+}
+
+.upvotes span {
+    display: block;
+}
+
+.article img {
+    max-width: 100%;
+    padding: 5px 20px;
+}
+
+.category {
+    background-color: rgb(246, 247, 248);
+    color: rgb(0, 121, 211);
+    margin-right: 10px;
+    padding: 3px 0;
+}
+
+.category:hover {
+    background-color: rgb(237, 239, 241);
+    cursor: pointer;
+}

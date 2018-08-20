@@ -1,0 +1,12 @@
+<div class="article-box">
+  <div *ngFor="let article of articles" class="article">
+    <div class="upvotes">
+        <span (click)="upvote(article)"><i class="fa fa-arrow-up" aria-hidden="true"></i></span> <span>{{ article.upvotes }}</span> <span (click)="downvote(article)"><i class="fa fa-arrow-down" aria-hidden="true"></i></span>
+    </div>
+    <div class="article-body">
+      <span class="category">{{ article.category }}</span> <span class="subreddit">{{ article.subreddit }}</span> <span class="postedBy">Posted by u/{{ article.user }} {{ article.timePosted }} </span>
+      <p>{{article.title}}</p>
+      <img src={{article.img}}>
+    </div>
+  </div>
+</div>
