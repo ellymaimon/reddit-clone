@@ -5,8 +5,8 @@
     </div>
     <div class="article-body">
       <span class="category">{{ article.category }}</span> <span class="subreddit">{{ article.subreddit }}</span> <span class="postedBy">Posted by u/{{ article.user }} {{ article.timePosted }} </span>
-      <p (click)="goToDetail(article)">{{article.title}}</p>
-      <img class="articleImage" src={{article.img}}>
+      <p class="clickable" (click)="goToDetail(article)">{{article.title}}</p>
+      <img class="articleImage clickable" (click)="goToDetail(article)" src={{article.img}}>
       <span><i class="fa fa-comment" aria-hidden="true"></i> 484 Comments</span> <span><i class="fa fa-share" aria-hidden="true"></i> Share</span> <span><i class="fa fa-bookmark-o" aria-hidden="true"></i> Save</span>
     </div>
   </div>

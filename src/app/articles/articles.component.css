@@ -34,6 +34,10 @@
     padding: 5px 20px;
 }
 
+.clickable {
+    cursor: pointer;
+}
+
 .category {
     background-color: rgb(246, 247, 248);
     color: rgb(0, 121, 211);
