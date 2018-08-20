@@ -1,15 +1,23 @@
-import { Component } from '@angular/core';
-import { articleList } from '../models/articleList.models';
+import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
+import { Article } from '../models/article.models';
+import { ArticleService } from '../article.service';
 
 @Component({
   selector: 'app-articles',
   templateUrl: './articles.component.html',
-  styleUrls: ['./articles.component.css']
+  styleUrls: ['./articles.component.css'],
+  providers: [ArticleService]
 })
-export class ArticlesComponent {
+export class ArticlesComponent implements OnInit {
 
-  articles = articleList;
-  constructor() { }
+  articles: Article[];
+
+  constructor(private router: Router, private articleService: ArticleService){}
+
+  ngOnInit() {
+    this.articles = this.articleService.getArticles();
+  }
 
   upvote(article) {
     article.upvotes++;
@@ -18,4 +26,9 @@ export class ArticlesComponent {
   downvote(article) {
     article.upvotes--;
   }
+
+  goToDetail(clickedArticle: Article) {
+    this.router.navigate(['', clickedArticle.id]);
+  };
+
 }

@@ -5,6 +5,7 @@ import { NgModule } from '@angular/core';
 import { AppComponent } from './app.component';
 import { ArticlesComponent } from './articles/articles.component';
 import { ArticleDetailComponent } from './article-detail/article-detail.component';
+import { routing } from './app.routing';
 
 
 @NgModule({
@@ -14,7 +15,8 @@ import { ArticleDetailComponent } from './article-detail/article-detail.componen
     ArticleDetailComponent
   ],
   imports: [
-    BrowserModule
+    BrowserModule,
+    routing
   ],
   providers: [],
   bootstrap: [AppComponent]
